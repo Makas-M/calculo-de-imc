@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+	<meta charset="utf-8">
+	<title>Calculo de Indice de Massa Corporal</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Calcule o seu Indice de Massa Corporal</h1>
+	<form method="get" action="imc.php">
+		<!--dados do sexo do usuario-->
+			<fieldset  size="20">
+				<legend>sexo</legend>
+				<input type="radio" name="sexo" id="masc" value="Masculino">
+				<label for="masc">Masculino</label> <br>
+				<input type="radio" name="sexo" id="fem" value="Feminino">
+				<label for="masc">Feminino</label>
+			</fieldset><br>
+			
+			<div>
+				Peso: <input type="int" name="peso" size="20" placeholder="seu peso">kg<br><br>
+				Altura: <input type="int" name="altura" size="15" placeholder="sua altura">metros<br><br>
+			</div>
+		
+		<input type="submit" name="Cacular">
+	</form>
+
+</body>
+</html>
