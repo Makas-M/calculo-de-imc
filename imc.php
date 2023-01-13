@@ -18,15 +18,18 @@
 	<?php
 
 		//sexo
-		$sex = $_GET["sexo"];
+		$sex = isset($_GET["sexo"]) ? $_GET["sexo"]: "[Nao Informado]" ;
 		//peso
-		$p = $_GET["peso"];
+		$p = isset($_GET["peso"]) ? $_GET["peso"] : 1;
 		//altura
-		$a = $_GET["altura"];
+		$a = isset($_GET["altura"]) ? $_GET["altura"] : 2;
 		
 		//calculo do desconto
-		$imc = $p/($a*$a);
+		if ($a != 0) {
 		
+		
+		$imc = (int)$p/((int)$a*(int)$a);
+		}
 
 		//saida dos resultados
 		echo "O seu Indice de Massa Corporal é de  ". number_format($imc, 2). "<br>";
