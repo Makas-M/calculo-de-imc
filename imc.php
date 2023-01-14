@@ -12,17 +12,21 @@
 			font-size: 30px;
 			color: pink;
 		}
+		span {
+			font-size: 30px;
+			color: red;
+		}
 	</style>
 </head>
 <body>
 	<?php
 
 		//sexo
-		$sex = isset($_GET["sexo"]) ? $_GET["sexo"]: "[Nao Informado]" ;
+		$sex = isset($_GET["sexo"]) ? $_GET["sexo"]: "Nao Informado" ;
 		//peso
-		$p = isset($_GET["peso"]) ? $_GET["peso"] : 1;
+		$p = isset($_GET["peso"]) ? $_GET["peso"] : "1";
 		//altura
-		$a = isset($_GET["altura"]) ? $_GET["altura"] : 2;
+		$a = isset($_GET["altura"]) ? $_GET["altura"] : "2";
 		
 		//calculo do desconto
 		if ($a != 0) {
@@ -48,7 +52,7 @@
 
 		}
 		elseif ($imc >= 30 && $imc <= 34.9) {
-			echo "<br>Obesidade grau 1";
+			echo "<br><span> Obesidade grau 1 </span>";
 			echo "<br> Peso ideal: ". number_format((53.695 + (($a-1.524)*53.5433)), 2);
 
 		}
@@ -77,16 +81,16 @@ elseif
 			echo "<br> Peso ideal: ". number_format((61.2328 + (($a-1.6002)*53.5433)), 2);
 		}
 		elseif ($imc >= 30 && $imc <= 34.9) {
-			echo "<br>Obesidade grau 1";
+			echo "<br><span> Obesidade grau 1 </span>";
 			echo "<br> Peso ideal: ". number_format((61.2328 + (($a-1.6002)*53.5433)), 2);
 
 		}
 		elseif ($imc >= 35 && $imc <= 39.9) {
-			echo "<br>Obesidade grau 2";
+			echo "<br><span>Obesidade grau 2</span>";
 			echo "<br> Peso ideal: ". number_format((61.2328 + (($a-1.6002)*53.5433)), 2);
 		}
 		elseif ($imc >= 40) {
-			echo "<br>Obesidade grau 3";
+			echo "<br><span>Obesidade grau 3</span>";
 			echo "<br> Peso ideal: ". number_format((61.2328 + (($a-1.6002)*53.5433)), 2);
 		}
 	}
