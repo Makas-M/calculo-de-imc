@@ -22,11 +22,11 @@
 	<?php
 
 		//sexo
-		$sex = isset($_GET["sexo"]) ? $_GET["sexo"]: "Nao Informado" ;
+		$sex = $_GET["sexo"];
 		//peso
-		$p = isset($_GET["peso"]) ? $_GET["peso"] : "1";
+		$p = $_GET["peso"];
 		//altura
-		$a = isset($_GET["altura"]) ? $_GET["altura"] : "2";
+		$a = $_GET["altura"];
 		
 		//calculo do desconto
 		if ($a != 0) {
