@@ -29,11 +29,11 @@
 		$a = $_GET["altura"];
 		
 		//calculo do desconto
-		if ($a != 0) {
+	
 		
 		
-		$imc = (int)$p/((int)$a*(int)$a);
-		}
+		$imc = ((int)$p/((int)$a*(int)$a));
+		
 
 		//saida dos resultados
 		echo "O seu Indice de Massa Corporal é de  ". number_format($imc, 2). "<br>";
@@ -57,12 +57,12 @@
 
 		}
 		elseif ($imc >= 35 && $imc <= 39.9) {
-			echo "<br>Obesidade grau 2";
+			echo "<br><span>Obesidade grau 2</span>";
 			echo "<br> Peso ideal: ". number_format((53.695 + (($a-1.524)*53.5433)), 2);
 
 		}
 		elseif ($imc >= 40) {
-			echo "<br>Obesidade grau 3";
+			echo "<br><span>Obesidade grau 3</span>";
 			echo "<br> Peso ideal: ". number_format((53.695 + (($a-1.524)*53.5433)), 2);
 
 		}
@@ -94,6 +94,7 @@ elseif
 			echo "<br> Peso ideal: ". number_format((61.2328 + (($a-1.6002)*53.5433)), 2);
 		}
 	}
+	
 	?>
 		<br><a href="index.html">voltar</a>
 </body>
